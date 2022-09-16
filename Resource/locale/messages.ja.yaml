@@ -1,0 +1,9 @@
+tooltip.product.product_video: Add Product Video
+admin.product.product_video__card_title: Product Video
+
+product_video.type.video_url: Video url
+product_video.type.video_url.placeholder: Enter video url
+product_video.type.title: title
+product_video.type.title.placeholder: Enter title
+
+product_video.type.video_preview: Video preview
