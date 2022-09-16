@@ -37,6 +37,13 @@ class ProductVideo extends AbstractEntity
      */
     private $video_url;
 
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text", nullable=true)
+     */
+    private $content;
+
     /**
      * @var int
      *
@@ -172,6 +179,30 @@ class ProductVideo extends AbstractEntity
     public function getSortNo()
     {
         return $this->sort_no;
+    }
+
+    /**
+     * getContent.
+     *
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * set related product content.
+     *
+     * @param string $content
+     *
+     * @return $this
+     */
+    public function setContent($content = null)
+    {
+        $this->content = $content;
+
+        return $this;
     }
 
     /**

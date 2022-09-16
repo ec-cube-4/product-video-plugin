@@ -25,7 +25,7 @@ class ProductVideoEvent implements EventSubscriberInterface
      */
     public function onRenderProductDetail(TemplateEvent $event)
     {
-        $event->addSnippet('@ProductVideo4/front/product_video.twig');
+        $event->addSnippet('ProductVideo4/default/product_video.twig');
     }
 
     /**

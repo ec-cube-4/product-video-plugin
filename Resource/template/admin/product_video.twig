@@ -24,44 +24,64 @@ $(function() {
     </div>
     <div class="collapse show ec-cardCollapse" id="pluginProductVideoArea">
         <div class="card-body">
-        {% for ProductVideoForm in form.ProductVideos %}
-            <div class="row mb-2">
-                <div class="col-3">
-                    <span>{{ 'product_video.type.title'|trans }}</span>
+            {% for no, ProductVideoForm in form.ProductVideos %}
+                <div class="d-block mb-3" data-toggle="collapse" href="#hidden_{{loop.index}}" role="button"
+                        aria-expanded="false" aria-controls="hidden_{{loop.index}}">
+                    <a>
+                        <i class="fa fa-plus-square-o font-weight-bold mr-1"></i>
+                        <span class="font-weight-bold">{{ 'admin.product.product_video__no'|trans({'%no%' : loop.index}) }}</span>
+                    </a>
                 </div>
-                <div class="col-9">
-                    <div>
-                        {{ form_widget(ProductVideoForm.title) }}
-                        {{ form_errors(ProductVideoForm.title) }}
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-3">
-                    <span>{{ 'product_video.type.video_url'|trans }}</span>
-                </div>
-                <div class="col-9">
-                    <div>
-                        {{ form_widget(ProductVideoForm.video_url, { attr : { rows : "3"} }) }}
-                        {{ form_errors(ProductVideoForm.video_url) }}
-                    </div>
-                </div>
-            </div>
-
-            {% if ProductVideoForm.vars.data.video_url is not empty %}
-                <div class="row">
-                    <div class="col-3">
-                        <span>{{ 'product_video.type.video_preview'|trans }}</span>
-                    </div>
-                    <div class="col-9">
-                        <div>
-                            {{ ProductVideoForm.vars.data.video_url|raw }}
+                <div class=" {{ (loop.index == 1 ? 'show' : '' ) }} collapse ec-collapse" id="hidden_{{loop.index}}">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <span>{{ 'product_video.type.title'|trans }}</span>
+                        </div>
+                        <div class="col-9">
+                            <div>
+                                {{ form_widget(ProductVideoForm.title) }}
+                                {{ form_errors(ProductVideoForm.title) }}
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endif %}
-        <hr>
-        {% endfor %}
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <span>{{ 'product_video.type.content'|trans }}</span>
+                        </div>
+                        <div class="col-9">
+                            <div>
+                                {{ form_widget(ProductVideoForm.content, { attr : { rows : "5"} }) }}
+                                {{ form_errors(ProductVideoForm.content) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <span>{{ 'product_video.type.video_url'|trans }}</span>
+                        </div>
+                        <div class="col-9">
+                            <div>
+                                {{ form_widget(ProductVideoForm.video_url, { attr : { rows : "3"} }) }}
+                                {{ form_errors(ProductVideoForm.video_url) }}
+                            </div>
+                        </div>
+                    </div>
+                    {% if ProductVideoForm.vars.data.video_url is not empty %}
+                        <div class="row">
+                            <div class="col-3">
+                                <span>{{ 'product_video.type.video_preview'|trans }}</span>
+                            </div>
+                            <div class="col-9">
+                                <div>
+                                    {{ ProductVideoForm.vars.data.video_url|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                <div>
+                
+            <hr>
+            {% endfor %}
         </div>
     </div>
 

@@ -75,6 +75,13 @@ class ProductVideoType extends AbstractType
                     'placeholder' => trans('product_video.type.title.placeholder'),
                 ],
             ])
+            ->add('content', TextareaType::class, [
+                'label' => trans('product_video.type.content'),
+                'required' => false,
+                'attr' => [
+                    'placeholder' => trans('product_video.type.content.placeholder'),
+                ],
+            ])
             ->add('video_url', TextareaType::class, [
                 'label' => trans('product_video.type.video_url'),
                 'required' => false,
