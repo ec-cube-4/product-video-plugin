@@ -42,7 +42,7 @@ class ConfigController extends AbstractController
             $this->entityManager->flush();
             $this->addSuccess('登録しました。', 'admin');
 
-            return $this->redirectToRoute('product_video_admin_config');
+            return $this->redirectToRoute('product_video4_admin_config');
         }
 
         return [

@@ -1,0 +1,27 @@
+<script>
+    $(function () {
+        $('#ProductVideo-product_area').appendTo($('.ec-layoutRole__main, .ec-layoutRole__mainWithColumn, .ec-layoutRole__mainBetweenColumn'));
+    });
+</script>
+
+<div id="ProductVideo-product_area" class="ec-shelfRole">
+    {% for ProductVideo in Product.ProductVideos %}
+        <div class="ec-role">
+            <div class="ec-newItemRole">
+                <div class="ec-pageHeader">
+                    <h1> {{ ProductVideo.title }}</h1>
+                </div>
+                <div class="ec-off1Grid">
+                    <div class="ec-off1Grid__cell">
+                        {{ ProductVideo.video_url|raw }}
+                    </div>
+                </div>
+                <div class="ec-off1Grid">
+                    <div class="ec-off1Grid__cell">
+                        {{ ProductVideo.content|raw }}
+                    </div>
+                </div>
+            <div>
+        </div>
+    {% endfor %}
+</div>

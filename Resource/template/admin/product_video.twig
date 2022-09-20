@@ -32,7 +32,7 @@ $(function() {
                         <span class="font-weight-bold">{{ 'admin.product.product_video__no'|trans({'%no%' : loop.index}) }}</span>
                     </a>
                 </div>
-                <div class=" {{ (loop.index == 1 ? 'show' : '' ) }} collapse ec-collapse" id="hidden_{{loop.index}}">
+                <div class=" {{ ( (loop.index == 1 or ProductVideoForm.vars.data.id is not empty ) ? 'show' : '' ) }} collapse ec-collapse" id="hidden_{{loop.index}}">
                     <div class="row mb-2">
                         <div class="col-3">
                             <span>{{ 'product_video.type.title'|trans }}</span>
