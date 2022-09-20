@@ -6,4 +6,9 @@ product_video.type.video_url.placeholder: Enter video url
 product_video.type.title: title
 product_video.type.title.placeholder: Enter title
 
+product_video.type.content: content
+product_video.type.content.placeholder: Enter content
+
 product_video.type.video_preview: Video preview
+
+admin.product.product_video__no: 'Video no %no%'
