@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductVideo4\Entity;
+namespace Plugin\ProductVideo42\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -14,7 +14,7 @@ trait ProductTrait
     /**
      * @var ProductVideo[]|Collection
      *
-     * @ORM\OneToMany(targetEntity="Plugin\ProductVideo4\Entity\ProductVideo", mappedBy="Product", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="Plugin\ProductVideo42\Entity\ProductVideo", mappedBy="Product", cascade={"persist", "remove"})
      * @ORM\OrderBy({
      *     "id"="ASC"
      * })

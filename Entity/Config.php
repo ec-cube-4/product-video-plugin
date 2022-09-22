@@ -1,15 +1,15 @@
 <?php
 
-namespace Plugin\ProductVideo4\Entity;
+namespace Plugin\ProductVideo42\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-if (!class_exists('\Plugin\ProductVideo4\Entity\Config', false)) {
+if (!class_exists('\Plugin\ProductVideo42\Entity\Config', false)) {
     /**
      * Config
      *
      * @ORM\Table(name="plg_product_video_config")
-     * @ORM\Entity(repositoryClass="Plugin\ProductVideo4\Repository\ConfigRepository")
+     * @ORM\Entity(repositoryClass="Plugin\ProductVideo42\Repository\ConfigRepository")
      */
     class Config
     {

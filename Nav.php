@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductVideo4;
+namespace Plugin\ProductVideo42;
 
 use Eccube\Common\EccubeNav;
 

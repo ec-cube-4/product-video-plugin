@@ -1,20 +1,20 @@
 <?php
 
-namespace Plugin\ProductVideo4\Form\Extension\Admin;
+namespace Plugin\ProductVideo42\Form\Extension\Admin;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Plugin\ProductVideo4\Repository\ConfigRepository;
+use Plugin\ProductVideo42\Repository\ConfigRepository;
 use Eccube\Entity\Product;
 use Eccube\Form\Type\Admin\ProductType;
-use Plugin\ProductVideo4\Entity\ProductVideo;
-use Plugin\ProductVideo4\Form\Type\Admin\ProductVideoType;
+use Plugin\ProductVideo42\Entity\ProductVideo;
+use Plugin\ProductVideo42\Form\Type\Admin\ProductVideoType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Plugin\ProductVideo4\Entity\Config;
+use Plugin\ProductVideo42\Entity\Config;
 
 /**
  * Class VideoCollectionExtension.
@@ -108,7 +108,7 @@ class VideoCollectionExtension extends AbstractTypeExtension
      *
      * @return string[]
      */
-    public static function getExtendedTypes()
+    public static function getExtendedTypes() : iterable
     {
         yield ProductType::class;
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\ProductVideo4\Repository;
+namespace Plugin\ProductVideo42\Repository;
 
 use Eccube\Repository\AbstractRepository;
-use Plugin\ProductVideo4\Entity\ProductVideo;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Plugin\ProductVideo42\Entity\ProductVideo;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * ProductVideoRepository.

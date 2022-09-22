@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductVideo4;
+namespace Plugin\ProductVideo42;
 
 use Eccube\Event\TemplateEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -25,7 +25,7 @@ class ProductVideoEvent implements EventSubscriberInterface
      */
     public function onRenderProductDetail(TemplateEvent $event)
     {
-        $event->addSnippet('Block/ProductVideo4/product_video.twig');
+        $event->addSnippet('Block/ProductVideo42/product_video.twig');
     }
 
     /**
@@ -35,6 +35,6 @@ class ProductVideoEvent implements EventSubscriberInterface
      */
     public function onRenderAdminProduct(TemplateEvent $event)
     {
-        $event->addSnippet('@ProductVideo4/admin/product_video.twig');
+        $event->addSnippet('@ProductVideo42/admin/product_video.twig');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductVideo4\Entity;
+namespace Plugin\ProductVideo42\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Entity\AbstractEntity;
@@ -10,7 +10,7 @@ use Eccube\Entity\Product;
  * ProductVideo
  *
  * @ORM\Table(name="plg_product_video")
- * @ORM\Entity(repositoryClass="Plugin\ProductVideo4\Repository\ProductVideoRepository")
+ * @ORM\Entity(repositoryClass="Plugin\ProductVideo42\Repository\ProductVideoRepository")
  */
 class ProductVideo extends AbstractEntity
 {

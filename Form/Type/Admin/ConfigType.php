@@ -1,9 +1,9 @@
 <?php
 
-namespace Plugin\ProductVideo4\Form\Type\Admin;
+namespace Plugin\ProductVideo42\Form\Type\Admin;
 
 use Eccube\Common\EccubeConfig;
-use Plugin\ProductVideo4\Entity\Config;
+use Plugin\ProductVideo42\Entity\Config;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\ProductVideo4\Repository;
+namespace Plugin\ProductVideo42\Repository;
 
 use Eccube\Repository\AbstractRepository;
-use Plugin\ProductVideo4\Entity\Config;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Plugin\ProductVideo42\Entity\Config;
+use Doctrine\Persistence\ManagerRegistry as RegistryInterface;
 
 /**
  * ConfigRepository

@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\ProductVideo4\Form\Type\Admin;
+namespace Plugin\ProductVideo42\Form\Type\Admin;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Common\EccubeConfig;
-use Plugin\ProductVideo4\Entity\ProductVideo;
+use Plugin\ProductVideo42\Entity\ProductVideo;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

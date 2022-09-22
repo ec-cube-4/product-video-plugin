@@ -1,5 +1,5 @@
 <?php
-namespace Plugin\ProductVideo4;
+namespace Plugin\ProductVideo42;
 
 use Eccube\Plugin\AbstractPluginManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -25,7 +25,7 @@ class PluginManager extends AbstractPluginManager
         /** @var EntityManagerInterface $entityManager */
         $entityManager = $container->get('doctrine')->getManager();
         $Block = $entityManager->getRepository(Block::class)->findOneBy([
-            'file_name' => 'ProductVideo4/' . $this->file_name]
+            'file_name' => 'ProductVideo42/' . $this->file_name]
         );
         if (is_null($Block)) {
             $this->createBlock($container);
@@ -43,7 +43,7 @@ class PluginManager extends AbstractPluginManager
         // ファイルコピー
         $file = new Filesystem();
         // ブロックファイルをコピー
-        $file->copy($this->originalDir.$this->template, $templateDir.'/Block/ProductVideo4/'.$this->template);
+        $file->copy($this->originalDir.$this->template, $templateDir.'/Block/ProductVideo42/'.$this->template);
     }
 
     private function createBlock(ContainerInterface $container)
@@ -55,12 +55,11 @@ class PluginManager extends AbstractPluginManager
         $DeviceType = $entityManager->getRepository(DeviceType::class)
             ->find(DeviceType::DEVICE_TYPE_PC);
 
-        // Create block
-        $Block = new Block();
+        /** @var Block $Block */
+        $Block = $entityManager->getRepository(Block::class)->newBlock($DeviceType);
         $Block->setDeviceType($DeviceType)
             ->setName('product video')
-            ->setFileName('ProductVideo4/' . $this->file_name)
-            ->setUseController(false)
+            ->setFileName('ProductVideo42/' . $this->file_name)
             ->setDeletable(false);
 
         $entityManager->persist($Block);
@@ -76,7 +75,7 @@ class PluginManager extends AbstractPluginManager
     {
         $templateDir = $container->getParameter('eccube_theme_front_dir');
         $file = new Filesystem();
-        $file->remove($templateDir.'/Block/ProductVideo4/' . $this->template);
+        $file->remove($templateDir.'/Block/ProductVideo42/' . $this->template);
     }
 
     /**
@@ -89,7 +88,7 @@ class PluginManager extends AbstractPluginManager
         /** @var EntityManagerInterface $entityManager */
         $entityManager = $container->get('doctrine')->getManager();
         $Block = $entityManager->getRepository(Block::class)->findOneBy([
-            'file_name' => 'ProductVideo4/'.$this->file_name
+            'file_name' => 'ProductVideo42/'.$this->file_name
         ]);
         
         if ($Block) {
