@@ -13,7 +13,7 @@ plugin.product_video.type.video_preview: Video preview
 
 plugin.admin.product.product_video__no: 'Video no %no%'
 
-plugin.settings.product_video.message_success: '登録しました。'
+plugin.settings.product_video.message_success: 'Save success'
 plugin.settings.product_video.title: 'ProductVideo42'
 plugin.settings.product_video.sub_title: 'Setting'
 plugin.settings.product_video.max_video: 'Max video'

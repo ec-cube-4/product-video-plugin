@@ -19,7 +19,7 @@ class ProductVideoEvent implements EventSubscriberInterface
     }
 
     /**
-     * フロント：商品詳細画面に関連商品を表示する.
+     * Front: Display related products on the product detail screen.
      *
      * @param TemplateEvent $event
      */
@@ -29,7 +29,7 @@ class ProductVideoEvent implements EventSubscriberInterface
     }
 
     /**
-     * 管理画面：商品登録画面に関連商品登録フォームを表示する.
+     * Management screen: Display the related product registration form on the product registration screen.
      *
      * @param TemplateEvent $event
      */

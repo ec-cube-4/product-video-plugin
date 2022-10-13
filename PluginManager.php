@@ -40,15 +40,15 @@ class PluginManager extends AbstractPluginManager
     private function copyBlock(ContainerInterface $container)
     {
         $templateDir = $container->getParameter('eccube_theme_front_dir');
-        // ファイルコピー
+        // file copy
         $file = new Filesystem();
-        // ブロックファイルをコピー
+        // copy block file
         $file->copy($this->originalDir.$this->template, $templateDir.'/Block/ProductVideo42/'.$this->template);
     }
 
     private function createBlock(ContainerInterface $container)
     {
-        // ページレイアウトにプラグイン使用時の値を代入
+        // Assign values to page layouts when using plugins
         /** @var EntityManagerInterface $entityManager */
         $entityManager = $container->get('doctrine')->getManager();
 

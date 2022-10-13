@@ -1,30 +1,29 @@
 {% extends '@admin/default_frame.twig' %}
-
 {% set menus = ['store', 'plugin', 'plugin_list'] %}
 
-{% block title %}ProductVideo42{% endblock %}
-{% block sub_title %}プラグイン一覧{% endblock %}
+{% block title %} {{ 'plugin.settings.product_video.title'|trans }} {% endblock %}
+{% block sub_title %} {{ 'plugin.settings.product_video.sub_title'|trans }} {% endblock %}
 
 {% form_theme form '@admin/Form/bootstrap_4_horizontal_layout.html.twig' %}
 
 {% block stylesheet %}{% endblock stylesheet %}
-
 {% block javascript %}{% endblock javascript %}
 
 {% block main %}
     <form role="form" method="post">
-
         {{ form_widget(form._token) }}
-
         <div class="c-contentsArea__cols">
             <div class="c-contentsArea__primaryCol">
                 <div class="c-primaryCol">
                     <div class="card rounded border-0 mb-4">
-                        <div class="card-header"><span>設定</span></div>
+                        <div class="card-header">
+                            <span>{{ 'plugin.settings.product_video.sub_title'|trans }}</span>
+                        </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-3"><span>名前</span><span
-                                            class="badge badge-primary ml-1">必須</span></div>
+                                <div class="col-3">
+                                    <span>{{ 'plugin.settings.product_video.max_video'|trans }}</span>
+                                </div>
                                 <div class="col mb-2">
                                     {{ form_widget(form.video_max) }}
                                     {{ form_errors(form.video_max) }}
@@ -43,15 +42,16 @@
                             <a class="c-baseLink"
                                href="{{ url('admin_store_plugin') }}">
                                 <i class="fa fa-backward" aria-hidden="true"></i>
-                                <span>プラグイン一覧</span>
+                                <span>{{ 'admin.store.plugin.plugin_list'|trans }}</span>
                             </a>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="row align-items-center justify-content-end">
                             <div class="col-auto">
-                                <button class="btn btn-ec-conversion px-5"
-                                        type="submit">登録</button>
+                                <button class="btn btn-ec-conversion px-5" type="submit">
+                                    {{ 'admin.common.registration'|trans }}
+                                </button>
                             </div>
                         </div>
                     </div>

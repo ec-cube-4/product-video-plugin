@@ -40,7 +40,7 @@ class ConfigController extends AbstractController
             $Config = $form->getData();
             $this->entityManager->persist($Config);
             $this->entityManager->flush();
-            $this->addSuccess('登録しました。', 'admin');
+            $this->addSuccess(trans('plugin.settings.product_video.message_success'), 'admin');
 
             return $this->redirectToRoute('product_video42_admin_config');
         }

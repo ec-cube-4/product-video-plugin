@@ -64,7 +64,7 @@ class ProductVideoType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'label' => trans('product_video.type.title'),
+                'label' => trans('plugin.product_video.type.title'),
                 'required' => false,
                 'constraints' => [
                     new Assert\Length([
@@ -72,21 +72,21 @@ class ProductVideoType extends AbstractType
                     ]),
                 ],
                 'attr' => [
-                    'placeholder' => trans('product_video.type.title.placeholder'),
+                    'placeholder' => trans('plugin.product_video.type.title.placeholder'),
                 ],
             ])
             ->add('content', TextareaType::class, [
-                'label' => trans('product_video.type.content'),
+                'label' => trans('plugin.product_video.type.content'),
                 'required' => false,
                 'attr' => [
-                    'placeholder' => trans('product_video.type.content.placeholder'),
+                    'placeholder' => trans('plugin.product_video.type.content.placeholder'),
                 ],
             ])
             ->add('video_url', TextareaType::class, [
-                'label' => trans('product_video.type.video_url'),
+                'label' => trans('plugin.product_video.type.video_url'),
                 'required' => false,
                 'attr' => [
-                    'placeholder' => trans('product_video.type.video_url.placeholder'),
+                    'placeholder' => trans('plugin.product_video.type.video_url.placeholder'),
                 ],
             ]);
 
